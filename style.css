@@ -39,19 +39,37 @@ html {
 }
 body {
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     color:white;
     background-color: hsl(257, 40%, 49%);
-}
-
-main {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     background-image: url(./images/bg-mobile.svg);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 30rem auto;
+    background-size: 600px auto;
+}
+
+main {
+    flex-grow: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media screen and (min-width:768px) {
+    body {
+        background-image: url(./images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-size: cover;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content:center;
+    }
 }
 
 .hero {
@@ -63,6 +81,13 @@ main {
     max-width: 33rem;
 }
 
+@media screen and (min-width:768px) {
+    .hero {
+        width:55%;
+        height:auto;
+        max-width: unset;
+    }
+}
 .huddle {
     width: 40%;
     height: auto;
@@ -74,12 +99,25 @@ main {
     height: auto;
 }
 
+@media screen and (min-width:768px) {
+    .huddle {
+        width: 30%;
+    }
+    .mockups {
+        width: 100%;
+        max-width: 95vmin;
+        min-width:25rem;
+    }
+}
+
 .info {
     max-width: 40rem;
     width: 80%;
     display:flex;
     flex-direction: column;
     align-items: center;
+    border:1px solid black;
+
 }
 
 h1 {
@@ -108,7 +146,9 @@ button {
     box-shadow: 0px 3px 3px 1px hsl(257, 41%, 35%);
 }
 
-
+.social {
+    padding-bottom: 1rem;
+}
 .social-icon {
     font-size:1rem;
     color:white;
