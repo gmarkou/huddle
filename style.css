@@ -58,7 +58,7 @@ main {
 
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     body {
         background-image: url(./images/bg-desktop.svg);
         background-repeat: no-repeat;
@@ -81,7 +81,7 @@ main {
     max-width: 33rem;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     .hero {
         width:55%;
         height:auto;
@@ -99,7 +99,7 @@ main {
     height: auto;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     .huddle {
         width: 30%;
     }
@@ -117,13 +117,31 @@ main {
     flex-direction: column;
     align-items: center;
 }
+.register {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     .info {
         width: 35%;
+        align-self:stretch;
         align-items: flex-start;
+        justify-items: center;
+    }
+
+    .register {
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        flex-grow: 1;
     }
 }
+
+
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -133,7 +151,7 @@ h1 {
     text-align: center;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     h1 {
         font-weight: 700;
         font-size: 2.1rem;
@@ -150,7 +168,7 @@ p {
     padding: 2rem 0;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     p {
         font-size: 1.1rem;
         line-height: 1.6;
@@ -170,14 +188,16 @@ button {
     box-shadow: 0px 3px 3px 1px hsl(257, 41%, 35%);
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     button {
         padding: 0.8rem 4rem;
     }
+
 }
 .social {
     padding-bottom: 1rem;
 }
+
 .social-icon {
     font-size:1rem;
     color:white;
@@ -187,11 +207,11 @@ button {
     border-radius: 1rem;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
     .social {
-        padding-bottom: 1rem;
+        padding: 2rem 0;
         align-self: flex-end;
-        position:relative;
+        flex-grow: 0;
     }
 
     .social-icon {
